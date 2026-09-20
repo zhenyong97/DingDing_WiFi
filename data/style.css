@@ -24,7 +24,8 @@ h3 {
 
 
 .content {
-    height: 280px;
+    min-height: 280px;
+    padding: 20px 0;
     background: #fff;
     box-shadow: 0 17px 37px -12px rgba(104, 104, 104, .24);
     border-radius: 10px;
@@ -34,11 +35,12 @@ h3 {
 
 form {
     width: fit-content;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 18px;
 }
 
 .form-group {
@@ -105,4 +107,101 @@ button:active {
     font-size: 1.5rem;
     color: purple;
     visibility: hidden;
+}
+
+/* ==================== 扫描附近 WiFi ==================== */
+
+#scan_card {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    padding: 18px 0 8px 0;
+}
+
+.scan-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 16px;
+}
+
+.scan-head h4 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: rgba(131, 58, 180, 1);
+}
+
+/* 覆盖全局 button 的圆形样式（它在文件前面，靠 id 提高优先级） */
+#scan_btn {
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.6em 1.1em;
+    color: purple;
+}
+
+#scan_btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+#scan_btn:disabled:active {
+    transform: none;
+}
+
+.hint {
+    padding: 0 16px;
+    margin: 10px 0 0 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+.hint.warn {
+    color: #b8860b;
+}
+
+#scan_result {
+    padding: 4px 16px 0 16px;
+}
+
+.ap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.ap-info {
+    min-width: 0;
+}
+
+.ap-name {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #333;
+    word-break: break-all;
+}
+
+.ap-meta {
+    margin-top: 3px;
+    font-size: 0.75rem;
+    color: #999;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    word-break: break-all;
+}
+
+.ap-pick {
+    flex: none;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 0.5em 1em;
+    color: purple;
 }

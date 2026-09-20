@@ -31,6 +31,23 @@
     </form>
 </div>
 
+<div class="content" id="scan_card">
+    <div class="scan-head">
+        <h4>📡 扫描附近 WiFi</h4>
+        <button type="button" id="scan_btn">开始扫描</button>
+    </div>
+    <p class="hint">
+        不知道要填什么？点「开始扫描」，下面会列出板子能搜到的热点。<br>
+        点某一行的「填入」会把这个热点的 <b>名字</b> 和 <b>MAC(BSSID)</b> 自动填进上面的表单。
+    </p>
+    <p class="hint warn">
+        ⚠️ 板子只有 <b>2.4GHz</b> 射频，5G 网络扫不出来。如果列表里找不到你的 WiFi，
+        说明它只有 5GHz，需要另外拿到它的 MAC 再手动填。
+    </p>
+    <div id="scan_status" class="hint"></div>
+    <div id="scan_result"></div>
+</div>
+
 <div id="popup">
     <span id="message"></span>
 </div>
